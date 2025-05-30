@@ -180,12 +180,6 @@ Vec3f shade_thread(Triangle tri, Vec3f p, Vec3f wr, Vec3f t, Vec3f wi, float pdf
         Vec3f t_offset = ts_offset.at(i);
         Vec3f local_normal_offset = ns_offset.at(i);
 
-        // auto [wi, pdf_wi] = std::holds_alternative<Lambertian>(BoxScene::materials[tri.material_id]) ? 
-        //     std::get<Lambertian>(BoxScene::materials[tri.material_id]).sample(local_normal_offset, UniformSampler::next2d()) :
-        //     std::get<Cloth>(BoxScene::materials[tri.material_id]).sample(wr, local_normal_offset, t_offset, UniformSampler::next3d());
-
-       
-
         Vec3f L_dir{0.0f};
         Vec3f L_indir{0.0f};
 
